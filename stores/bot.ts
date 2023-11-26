@@ -45,7 +45,7 @@ export const botStore = defineStore("bot", {
                     }
                 })
                 if (!error.value){
-                    this.started = true;
+                    this.started = false;
                 }
             }catch(e){
                 console.error(e)
