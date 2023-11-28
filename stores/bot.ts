@@ -14,9 +14,13 @@ export const botStore = defineStore("bot", {
     state: () => ({
         started: false,
         commands: [] as Command[],
-        disabled: [] as string[]
+        disabled: [] as string[],
+        logs: [] as string[]
     }),
     actions: {
+        putLog(message: string){
+            this.logs.push(message)
+        },
         async start(token: string){
             const { serviceUrl } = useRuntimeConfig().public
             try {
@@ -31,6 +35,7 @@ export const botStore = defineStore("bot", {
                     this.started = true;
                 }
             }catch(e){
+                this.putLog("Failed to start discord bot")
                 console.error(e)
             }
         },
@@ -48,6 +53,7 @@ export const botStore = defineStore("bot", {
                     this.started = false;
                 }
             }catch(e){
+                this.putLog("Failed to stop discord bot")
                 console.error(e)
             }
         },
@@ -65,7 +71,7 @@ export const botStore = defineStore("bot", {
                 })
                 if (!error.value){
                     this.disabled.push(...commands)
-                    useMyToastStore().setToast("success", "command updated")
+                    useMyToastStore().setToast("success", `Command ${commands.join(", ")} have been disabled`)
                 }
             }catch(e){
                 console.error(e)
@@ -85,7 +91,7 @@ export const botStore = defineStore("bot", {
                 })
                 if (!error.value){
                     this.disabled = this.disabled.filter(v => !commands.includes(v))
-                    useMyToastStore().setToast("success", "command updated")
+                    useMyToastStore().setToast("success", `Success enable command ${commands.join(", ")}`)
                 }
             }catch(e){
                 console.error(e)

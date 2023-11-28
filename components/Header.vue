@@ -4,10 +4,8 @@
             <nuxt-link to="/" class="btn btn-ghost text-xl">F-BOT</nuxt-link>
         </div>
         <div class="flex-none gap-3">
-            <div class="text-sm breadcrumbs">
-                <ul>
-                    <li v-if="!$route.fullPath.endsWith('dashboard')"><nuxt-link to="/dashboard">Dashboard</nuxt-link></li> 
-                </ul>
+            <div class="max-w-[10em] sm:max-w-none w-full overflow-x-auto overflow-y-hidden">
+                <Breadcrumbs/>
             </div>
             <div class="dropdown dropdown-end" v-if="user?.id">
                 <label tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -16,7 +14,7 @@
                     </div>
                 </label>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-40">
-                    <li><nuxt-link to="/setting">Settings</nuxt-link></li>
+                    <li><nuxt-link to="/dashboard/setting">Settings</nuxt-link></li>
                     <li><nuxt-link to="#" @click.native="logoutModal = true">Logout</nuxt-link></li>
                 </ul>
             </div>

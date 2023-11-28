@@ -1,6 +1,6 @@
 <template>
   <div class="py-10 px-6">
-    <div class="sm:max-w-[50rem] flex flex-col items-center mx-auto pt-10 rounded-md bg-base-100 min-h-[calc(100vh-14rem)]">
+    <div class="sm:max-w-[50rem] flex flex-col items-center mx-auto pt-10 pb-4 rounded-md bg-base-100 min-h-[calc(100vh-14rem)]">
       <div class="w-auto">
         <div class="w-full flex flex-col sm:flex-row gap-2">
           <div class="form-control w-full max-w-xs lg:max-w-[27rem]">
