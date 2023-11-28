@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen grid place-items-center">
+    <div class="w-full min-h-[calc(100vh-12rem)] grid place-items-center">
         <button type="button" @click="signWithDiscord" class="btn">
             <span>Continue with </span>
             <ClientOnly>
