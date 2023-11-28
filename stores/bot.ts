@@ -71,7 +71,7 @@ export const botStore = defineStore("bot", {
                 })
                 if (!error.value){
                     this.disabled.push(...commands)
-                    useMyToastStore().setToast("success", `Command ${commands.join(", ")} have been disabled`)
+                    useMyToastStore().setToast("success", `Command ${commands.join(", ")} have been disabled. Restart to apply`)
                 }
             }catch(e){
                 console.error(e)
@@ -91,7 +91,7 @@ export const botStore = defineStore("bot", {
                 })
                 if (!error.value){
                     this.disabled = this.disabled.filter(v => !commands.includes(v))
-                    useMyToastStore().setToast("success", `Success enable command ${commands.join(", ")}`)
+                    useMyToastStore().setToast("success", `Success enable command ${commands.join(", ")}. Restart to apply`)
                 }
             }catch(e){
                 console.error(e)
