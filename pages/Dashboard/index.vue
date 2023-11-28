@@ -26,7 +26,7 @@ let socket: WebSocket
 
 onMounted(()=> {
     botState.fetchStatus(token.value!)
-    socket = new WebSocket("ws://" + runtimeConfig.public.serviceUrl!.split("://")[1] + "/ws?token=" + token.value)
+    socket = new WebSocket(runtimeConfig.public.serviceUrl!.replace("http", "ws") + "/ws?token=" + token.value)
     
     socket.addEventListener("open", () => {
         botState.putLog(botState.started ? "Start listening log" : "Discord bot is offline")
