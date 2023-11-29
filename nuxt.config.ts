@@ -17,7 +17,32 @@ export default defineNuxtConfig({
       serviceUrl: process.env.SERVICE_URL!
     }
   },
-  pwa: {
-    manifest: {"theme_color":"#8936FF","background_color":"#2EC6FE","orientation":"any","display":"standalone","dir":"auto","lang":"en-US","name":"F-BOT","start_url":"/","short_name":"F","description":"Create your own Discord bot for free. No coding required, just choose the command what do you need"}
+  pwa:{
+    manifest: {
+      "theme_color": "#fff",
+      "background_color": "#fff",
+      "display": "standalone",
+      "scope": "/",
+      "start_url": "/",
+      "name": "Discord Bot",
+      "short_name": "D25",
+      "icons": [
+          {
+              "purpose": "maskable",
+              "src": "images/icon512_maskable.png",
+              "sizes": "512x512",
+              "type": "image/png"
+          },
+          {
+              "purpose": "any",
+              "src": "images/icon512_rounded.png",
+              "sizes": "512x512",
+              "type": "image/png"
+          },
+      ]
+    },
+    devOptions: {
+      enabled: true
+    }
   }
 })
