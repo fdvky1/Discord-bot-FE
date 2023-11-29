@@ -1,9 +1,22 @@
-# Nuxt 3 Minimal Starter
+# Discord bot
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+i have no idea for naming this project
 
 ## Setup
 
+Create [Supabase](https://supabase.com) project\
+Create [discord application](https://discord.com/developers/applications)\
+Setup discord provider on [Supabase](https://supabase.com), [Instructions here](https://supabase.com/docs/guides/auth/social-login/auth-discord)\
+Open SQL Editor on [Supabase](https://supabase.com) and [Execute this](https://gist.github.com/fdvky1/1bf95e80e2155c228e1ba050aa29ff35)
+
+Run [Backend](https://github.com/fdvky1/discord-bot-fe) first
+
+fill the .env
+```bash
+SUPABASE_URL="your supabase project url"
+SUPABASE_KEY="supabase project anon key"
+SERVICE_URL="BOT SERVICE URL(you must setup the backend)"
+```
 Make sure to install the dependencies:
 
 ```bash
