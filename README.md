@@ -1,6 +1,6 @@
 # Discord bot
 
-i have no idea for naming this project
+Web console for create & manage discord bot
 
 ## Setup
 
@@ -9,7 +9,7 @@ Create [discord application](https://discord.com/developers/applications)\
 Setup discord provider on [Supabase](https://supabase.com), [Instructions here](https://supabase.com/docs/guides/auth/social-login/auth-discord)\
 Open SQL Editor on [Supabase](https://supabase.com) and [Execute this](https://gist.github.com/fdvky1/1bf95e80e2155c228e1ba050aa29ff35)
 
-Run [Backend](https://github.com/fdvky1/discord-bot) first
+Run [Backend](https://github.com/fdvky1/discord-bot)
 
 fill the .env
 ```bash
@@ -17,6 +17,7 @@ SUPABASE_URL="your supabase project url"
 SUPABASE_KEY="supabase project anon key"
 SERVICE_URL="BOT SERVICE URL(you must setup the backend)"
 ```
+
 Make sure to install the dependencies:
 
 ```bash
